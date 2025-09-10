@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Navbar, Nav, Button, Card, Row, Col, Image, Carousel } from 'react-bootstrap';
+import { Container, Navbar, Nav, Button, Card, Row, Col, Image, Carousel, NavDropdown } from 'react-bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import ProfilePic from './assets/2x2.jpg';
 import './App.css';
@@ -7,178 +7,66 @@ import './App.css';
 function App() {
   return (
     <>
-      {/* About Section */}
-      <section id="about">
-        <Container>
-          <h2 className="fw-bold mb-4 text-center">About Me</h2>
-          <Card className="p-4 shadow-sm border-0">
-            <Card.Body>
-              <Card.Text className="fs-5">
-                I am a dedicated <b>IT Lecturer</b> with expertise in programming,
-                research, and curriculum development. Currently teaching at
-                <b> Tarlac Agricultural University</b> while pursuing impactful
-                research projects in IT and agriculture.
-              </Card.Text>
-            </Card.Body>
-          </Card>
+      <header className="navbar-wrapper">
+        <Navbar expand="lg" variant="dark" fixed="top" className="custom-navbar">
+          <Container>
+            <Navbar.Brand href="#home" className="fw-bold">My Portfolio</Navbar.Brand>
+            <Navbar.Toggle aria-controls="navbar-nav" />
+            <Navbar.Collapse id="navbar-nav">
+              <Nav className="ms-auto">
+                <Nav.Link href="#about">About</Nav.Link>
+                
+                {/* Dropdown for Academic */}
+                <NavDropdown title="Academic" id="academic-dropdown">
+                  <NavDropdown.Item href="#education">Education</NavDropdown.Item>
+                  <NavDropdown.Item href="#teaching">Teaching</NavDropdown.Item>
+                  <NavDropdown.Item href="#research">Research</NavDropdown.Item>
+                  <NavDropdown.Item href="#projects">Projects</NavDropdown.Item>
+                </NavDropdown>
+
+                <Nav.Link href="#skills">Skills</Nav.Link>
+                <Nav.Link href="#contact">Contact</Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+      </header>
+
+
+
+      {/* Hero Section */}
+      <section className="hero-section">
+        <Container className="text-center">
+          <Image
+            src={ProfilePic} // imported image
+            roundedCircle
+            fluid
+            alt="Profile"
+            className="mb-3 shadow"
+            style={{ width: "180px", height: "180px", objectFit: "cover" }}
+          />
+          <h1 className="fw-bold">Hi, I’m Lyle Zhyla Patalod</h1>
+            <p className="lead">
+              Educator | IT Specialist | Researcher
+            </p>
+            <Button variant="primary" size="lg" className="mt-2  mb-5">
+              Download CV
+            </Button>
+
+            <h2 className="fw-bold text-center">About Me</h2>
+            
+              <Card.Body>
+                <Card.Text className="fs-5 text-muted">
+                  I am a dedicated <b>IT Lecturer</b> with expertise in <b>programming,
+                  research, and curriculum development</b>. Currently teaching at
+                  <b> Tarlac Agricultural University</b> while pursuing impactful research
+                  projects in IT and agriculture.
+                </Card.Text>
+              </Card.Body>
+            
         </Container>
       </section>
 
-      {/* Education Section */}
-      <section id="education">
-        <Container>
-          <h2 className="fw-bold mb-4 text-center">Education</h2>
-          <Row>
-            <Col md={4}>
-              <Card className="shadow-sm border-0 mb-3 text-center p-3">
-                <Card.Body>
-                  <Card.Title className="fw-bold">MSIT</Card.Title>
-                  <Card.Text>
-                    Master of Science in Information Technology
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card className="shadow-sm border-0 mb-3 text-center p-3">
-                <Card.Body>
-                  <Card.Title className="fw-bold">BSIT (Cum Laude)</Card.Title>
-                  <Card.Text>
-                    Bachelor of Science in Information Technology
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card className="shadow-sm border-0 mb-3 text-center p-3">
-                <Card.Body>
-                  <Card.Title className="fw-bold">Exchange Student</Card.Title>
-                  <Card.Text>
-                    International Study Program – Indonesia
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      {/* Teaching Section */}
-      <section id="teaching">
-        <Container>
-          <h2 className="fw-bold mb-4 text-center">Teaching</h2>
-          <Row>
-            <Col md={6}>
-              <Card className="shadow-sm border-0 mb-3 p-3">
-                <Card.Body>
-                  <Card.Title className="fw-bold">Undergraduate Courses</Card.Title>
-                  <Card.Text>
-                    • Discrete Mathematics <br />
-                    • Database Management <br />
-                    • Living in the IT Era
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={6}>
-              <Card className="shadow-sm border-0 mb-3 p-3">
-                <Card.Body>
-                  <Card.Title className="fw-bold">Graduate / Special Topics</Card.Title>
-                  <Card.Text>
-                    • Database Security & Concurrency <br />
-                    • Research Methods in IT <br />
-                    • Emerging Technologies
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      {/* Research Section */}
-      <section id="research">
-        <Container>
-          <h2 className="fw-bold mb-4 text-center">Research</h2>
-          <Carousel interval={2000} controls indicators={false}>
-            <Carousel.Item>
-              <Card className="shadow-sm border-0 text-center p-4">
-                <Card.Body>
-                  <Card.Title className="fw-bold">Ongoing Research</Card.Title>
-                  <Card.Text>
-                    Biochar and Soil Health in Tarlac – exploring sustainable
-                    agriculture through IT-assisted soil analysis.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Carousel.Item>
-            <Carousel.Item>
-              <Card className="shadow-sm border-0 text-center p-4">
-                <Card.Body>
-                  <Card.Title className="fw-bold">Proposal</Card.Title>
-                  <Card.Text>
-                    Digital Platform for Alumni Engagement – fostering connections
-                    and career development through an online system.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Carousel.Item>
-            <Carousel.Item>
-              <Card className="shadow-sm border-0 text-center p-4">
-                <Card.Body>
-                  <Card.Title className="fw-bold">Future Research</Card.Title>
-                  <Card.Text>
-                    Integration of AI in curriculum analytics to improve teaching
-                    and student learning outcomes.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Carousel.Item>
-          </Carousel>
-        </Container>
-      </section>
-
-      {/* Projects Section */}
-      <section id="projects">
-        <Container>
-          <h2 className="fw-bold mb-4 text-center">Projects & Systems</h2>
-          <Row>
-            <Col md={4}>
-              <Card className="mb-3 shadow-sm border-0">
-                <Card.Img variant="top" src="https://via.placeholder.com/400x200" />
-                <Card.Body>
-                  <Card.Title>RescueNet</Card.Title>
-                  <Card.Text>
-                    Disaster Preparedness and Response System for real-time support.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card className="mb-3 shadow-sm border-0">
-                <Card.Img variant="top" src="https://img.pikbest.com/backgrounds/20241215/abstract-blue-background-with-some-smooth-lines-in-it--28see-more-my-portfolio-29_11256315.jpg!bw700" />
-                <Card.Body>
-                  <Card.Title>Library Management System</Card.Title>
-                  <Card.Text>
-                    Web-based library system using Flask and MySQL.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card className="mb-3 shadow-sm border-0">
-                <Card.Img variant="top" src="https://img.pikbest.com/wp/202347/architecture-portfolio-blue-luxury-background-with-abstract-wall-wave-3d-rendered-and-perfect-for-website-presentation-or-use_9759684.jpg!sw800" />
-                <Card.Body>
-                  <Card.Title>Bookstore System</Card.Title>
-                  <Card.Text>
-                    Inventory and Sales Management with integrated MySQL database.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-      </section>
 
       {/* Skills Section */}
       <section id="skills">
@@ -224,6 +112,75 @@ function App() {
                   Expert
                 </div>
               </div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+
+      {/* Academic Section */}
+      <section id="academic">
+        <Container>
+          <h2 className="fw-bold mb-4 text-center">Academic</h2>
+          <Row>
+            {/* Education */}
+            <Col md={6} lg={3}>
+              <Card className="shadow-sm border-0 mb-4 text-center p-3">
+                <Card.Body>
+                  <i className="bi bi-mortarboard-fill fs-1 text-primary"></i>
+                  <Card.Title className="fw-bold text-primary mt-2">Education</Card.Title>
+                  <Card.Text>
+                    <strong>MSIT</strong> – Master of Science in IT <br />
+                    <strong>BSIT (Cum Laude)</strong> – Bachelor of Science in IT <br />
+                    <strong>Exchange Student</strong> – Indonesia
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+
+           {/* Teaching */}
+          <Col md={6} lg={3}>
+            <Card className="shadow-sm border-0 mb-4 text-center p-3">
+              <Card.Body>
+                {/* Gumamit ng existing icon */}
+                <i className="bi bi-easel fs-1 text-success"></i>
+                <Card.Title className="fw-bold text-success mt-2">Teaching</Card.Title>
+                <Card.Text>
+                  Undergraduate: Discrete Math, Database Mgmt <br />
+                  Graduate: Database Security, Research Methods
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+
+            {/* Research */}
+            <Col md={6} lg={3}>
+              <Card className="shadow-sm border-0 mb-4 text-center p-3">
+                <Card.Body>
+                  <i className="bi bi-search fs-1 text-danger"></i>
+                  <Card.Title className="fw-bold text-danger mt-2">Research</Card.Title>
+                  <Card.Text>
+                    <strong>Ongoing:</strong> Biochar & Soil Health <br />
+                    <strong>Proposal:</strong> Alumni Engagement System <br />
+                    <strong>Future:</strong> AI in Curriculum Analytics
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+
+            {/* Projects */}
+            <Col md={6} lg={3}>
+              <Card className="shadow-sm border-0 mb-4 text-center p-3">
+                <Card.Body>
+                  <i className="bi bi-code-slash fs-1 text-warning"></i>
+                  <Card.Title className="fw-bold text-warning mt-2">Projects</Card.Title>
+                  <Card.Text>
+                    RescueNet: Disaster Response <br />
+                    Library Management (Flask + MySQL) <br />
+                    Bookstore System: Inventory & Sales
+                  </Card.Text>
+                </Card.Body>
+              </Card>
             </Col>
           </Row>
         </Container>

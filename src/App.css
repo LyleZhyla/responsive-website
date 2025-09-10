@@ -51,30 +51,29 @@ footer {
 
 /* ----------------- Section Styling ----------------- */
 section {
-  width: 100vw;               /* buong lapad ng screen */
-  margin-left: calc(-50vw + 50%); /* alisin yung side gaps */
-  padding: 80px 0;            /* spacing */
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 80px 0;
 }
 
-/* Odd sections → light */
+/* Alternating colors */
 section:nth-of-type(odd) {
-  background-color: #ffffff;  /* White */
-  color: #222;                /* Dark text */
+  background-color: #ffffff;
+  color: #222;
 }
 
-/* Even sections → dark */
 section:nth-of-type(even) {
-  background-color: #0d1b2a;  /* Navy */
-  color: #ffffff;             /* White text */
+  background-color: #0d1b2a;
+  color: #ffffff;
 }
 
-/* Make sure text/cards inside dark sections are visible */
 section:nth-of-type(even) h2,
 section:nth-of-type(even) p,
 section:nth-of-type(even) .card-title,
 section:nth-of-type(even) .card-text {
   color: #ffffff;
 }
+
 
 
 /* ----------------- Section Titles ----------------- */
@@ -122,7 +121,7 @@ img.rounded-circle {
   width: 100vw;
   margin-left: calc(-50vw + 50%); /* remove side gaps */
   background-color: #f8f9fa; /* light background */
-  padding: 100px 20px;
+  padding: 100px 10px;
 }
 
 .hero-section h1 {
