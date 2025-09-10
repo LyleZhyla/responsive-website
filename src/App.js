@@ -1,8 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Navbar, Nav, Button, Card, Row, Col, Image, Carousel, NavDropdown } from 'react-bootstrap';
+import { Container, Navbar, Nav, Button, Card, Row, Col, Image, Carousel, NavDropdown, Modal } from 'react-bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import ProfilePic from './assets/2x2.jpg';
 import './App.css';
+
+import Academic from "./Academic";
+
 
 function App() {
   return (
@@ -119,72 +122,8 @@ function App() {
 
 
       {/* Academic Section */}
-      <section id="academic">
-        <Container>
-          <h2 className="fw-bold mb-4 text-center">Academic</h2>
-          <Row>
-            {/* Education */}
-            <Col md={6} lg={3}>
-              <Card className="shadow-sm border-0 mb-4 text-center p-3">
-                <Card.Body>
-                  <i className="bi bi-mortarboard-fill fs-1 text-primary"></i>
-                  <Card.Title className="fw-bold text-primary mt-2">Education</Card.Title>
-                  <Card.Text>
-                    <strong>MSIT</strong> – Master of Science in IT <br />
-                    <strong>BSIT (Cum Laude)</strong> – Bachelor of Science in IT <br />
-                    <strong>Exchange Student</strong> – Indonesia
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-
-           {/* Teaching */}
-          <Col md={6} lg={3}>
-            <Card className="shadow-sm border-0 mb-4 text-center p-3">
-              <Card.Body>
-                {/* Gumamit ng existing icon */}
-                <i className="bi bi-easel fs-1 text-success"></i>
-                <Card.Title className="fw-bold text-success mt-2">Teaching</Card.Title>
-                <Card.Text>
-                  Undergraduate: Discrete Math, Database Mgmt <br />
-                  Graduate: Database Security, Research Methods
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-
-            {/* Research */}
-            <Col md={6} lg={3}>
-              <Card className="shadow-sm border-0 mb-4 text-center p-3">
-                <Card.Body>
-                  <i className="bi bi-search fs-1 text-danger"></i>
-                  <Card.Title className="fw-bold text-danger mt-2">Research</Card.Title>
-                  <Card.Text>
-                    <strong>Ongoing:</strong> Biochar & Soil Health <br />
-                    <strong>Proposal:</strong> Alumni Engagement System <br />
-                    <strong>Future:</strong> AI in Curriculum Analytics
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-
-            {/* Projects */}
-            <Col md={6} lg={3}>
-              <Card className="shadow-sm border-0 mb-4 text-center p-3">
-                <Card.Body>
-                  <i className="bi bi-code-slash fs-1 text-warning"></i>
-                  <Card.Title className="fw-bold text-warning mt-2">Projects</Card.Title>
-                  <Card.Text>
-                    RescueNet: Disaster Response <br />
-                    Library Management (Flask + MySQL) <br />
-                    Bookstore System: Inventory & Sales
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      <Academic />
+      
 
       {/* Hobbies Section */}
       <section id="hobbies">
