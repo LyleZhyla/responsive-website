@@ -1,11 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Navbar, Nav, Button, Card, Row, Col, Image, Carousel, NavDropdown, Modal } from 'react-bootstrap';
+import { Container, Navbar, Nav, Button, Card, Row, Col, Image, NavDropdown } from 'react-bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import ProfilePic from './assets/2x2.jpg';
 import './App.css';
 
 import Academic from "./Academic";
-
+import Hobbies from "./Hobbies";
 
 function App() {
   return (
@@ -126,49 +126,7 @@ function App() {
       
 
       {/* Hobbies Section */}
-      <section id="hobbies">
-        <Container>
-          <h2 className="fw-bold mb-4 text-center">Hobbies & Interests</h2>
-          <Row>
-            <Col md={3} sm={6} className="text-center mb-3">
-              <Card className="shadow-sm border-0 p-3">
-                <Card.Body>
-                  <i className="bi bi-book fs-1 text-primary"></i>
-                  <Card.Title className="mt-2">Reading</Card.Title>
-                  <Card.Text>Tech blogs, research, and self-growth books</Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={3} sm={6} className="text-center mb-3">
-              <Card className="shadow-sm border-0 p-3">
-                <Card.Body>
-                  <i className="bi bi-music-note-beamed fs-1 text-success"></i>
-                  <Card.Title className="mt-2">Music</Card.Title>
-                  <Card.Text>Listening to OPM and classical music</Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={3} sm={6} className="text-center mb-3">
-              <Card className="shadow-sm border-0 p-3">
-                <Card.Body>
-                  <i className="bi bi-globe2 fs-1 text-danger"></i>
-                  <Card.Title className="mt-2">Travel</Card.Title>
-                  <Card.Text>Exploring cultures and new environments</Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={3} sm={6} className="text-center mb-3">
-              <Card className="shadow-sm border-0 p-3">
-                <Card.Body>
-                  <i className="bi bi-brush fs-1 text-warning"></i>
-                  <Card.Title className="mt-2">Creative Arts</Card.Title>
-                  <Card.Text>Digital design and visual storytelling</Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      <Hobbies />
 
       {/* Contact Section */}
       <section id="contact" className="text-center">
