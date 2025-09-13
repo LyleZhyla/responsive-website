@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Navbar, Nav, Button, Card, Row, Col, Image} from 'react-bootstrap';
+import { Container, Navbar, Nav,  Card, Row, Col, Image} from 'react-bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import ProfilePic from './assets/2x2.jpg';
 import './App.css';
@@ -31,7 +31,7 @@ function App() {
 
 
       {/* Hero Section */}
-      <section className="hero-section py-6">
+      <section id="home" className="hero-section py-6">
         <Container className="text-center">
           <Image
             src={ProfilePic} // imported image
@@ -43,11 +43,9 @@ function App() {
           />
           <h1 className="fw-bold">Hi, I’m Lyle Zhyla Patalod</h1>
             <p className="lead">
-              Educator | IT Specialist | Researcher
+              Educator | IT Specialist 
             </p>
-            <Button variant="primary" size="lg" className="mt-2  mb-5">
-              Download CV
-            </Button>
+
 
             <h2 className="fw-bold text-center">About Me</h2>
             
@@ -75,7 +73,7 @@ function App() {
               <Row className="text-center">
                 <Col md={6} className="mb-4">
                   <i className="bi bi-mortarboard-fill fs-1 text-danger"></i>
-                  <h5 className="mt-2">Teaching & Research</h5>
+                  <h5 className="mt-2">Teaching</h5>
                 </Col>
                 <Col md={6} className="mb-4">
                   <i className="bi bi-code-slash fs-1 text-success"></i>
@@ -121,8 +119,8 @@ function App() {
                   <h5 className="mt-2">Teamwork</h5>
                 </Col>
                 <Col md={6} className="mb-4">
-                  <i className="bi bi-clock-history fs-1 text-info"></i>
-                  <h5 className="mt-2">Time Management</h5>
+                  <i className="bi bi-easel3-fill fs-1 text-info"></i>
+                  <h5 className="mt-2">Presentation Skills</h5>
                 </Col>
                 <Col md={6} className="mb-4">
                   <i className="bi bi-journal-check fs-1 text-secondary"></i>
