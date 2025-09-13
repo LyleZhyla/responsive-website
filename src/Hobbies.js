@@ -22,7 +22,7 @@ const Hobbies = () => {
         { image: require("./assets/music2.png"), text: "Shape of You – Ed Sheeran" },
         { image: require("./assets/music3.jpg"), text: "Alexandra – Reality Club" },
         { image: require("./assets/music4.jpg"), text: "It Will Rain – Bruno Mars" },
-        { image: require("./assets/music5.jpg"), text: "Paraluman – Adie" },
+        { image: require("./assets/music5.png"), text: "Paraluman – Adie" },
       ]
     },
     {
@@ -57,10 +57,10 @@ const Hobbies = () => {
       title: "Sports Enthusiast",
       short: "Loves racquet sports and other competitive games",
       slides: [
-        { image: require("./assets/sport1.jpg"), text: "Tennis" },
-        { image: require("./assets/sport2.jpg"), text: "Badminton" },
+        { image: require("./assets/sport1.png"), text: "Tennis" },
+        { image: require("./assets/sport2.png"), text: "Badminton" },
         { image: require("./assets/sport3.png"), text: "Volleyball" },
-        { image: require("./assets/sport5.jpg"), text: "Basketball" },
+        { image: require("./assets/sport5.png"), text: "Basketball" },
       ]
     },
   ];
