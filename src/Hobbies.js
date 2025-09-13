@@ -13,7 +13,7 @@ const Hobbies = () => {
 
   const hobbies = [
     {
-      icon: "bi bi-music-note-beamed",
+      icon: "i bi-music-player ",
       color: "text-success",
       title: "Music Lover",
       short: "Listening to pop, soft rock, acoustic, and OPM hits",
@@ -26,7 +26,7 @@ const Hobbies = () => {
       ]
     },
     {
-      icon: "bi bi-guitar",
+      icon: "bbi bi-music-note-beamed",
       color: "text-primary",
       title: "Instrument Playing",
       short: "Playing guitar, piano, and other instruments",
@@ -35,7 +35,6 @@ const Hobbies = () => {
         { image: require("./assets/instrument2.jpg"), text: "Bass Guitar" },
         { image: require("./assets/instrument3.jpg"), text: "Drums" },
         { image: require("./assets/instrument4.png"), text: "Keyboard" },
-        { image: require("./assets/instrument5.jpg"), text: "Ukulele" },
       ]
     },
     {
@@ -59,10 +58,9 @@ const Hobbies = () => {
       short: "Loves racquet sports and other competitive games",
       slides: [
         { image: require("./assets/sport1.jpg"), text: "Tennis" },
-        { image: require("./assets/sport2.png"), text: "Badminton" },
+        { image: require("./assets/sport2.jpg"), text: "Badminton" },
         { image: require("./assets/sport3.png"), text: "Volleyball" },
-        { image: require("./assets/sport4.png"), text: "Table Tennis" },
-        { image: require("./assets/sport5.png"), text: "Basketball" },
+        { image: require("./assets/sport5.jpg"), text: "Basketball" },
       ]
     },
   ];
