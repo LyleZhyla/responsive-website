@@ -17,17 +17,10 @@ function App() {
             <Navbar.Toggle aria-controls="navbar-nav" />
             <Navbar.Collapse id="navbar-nav">
               <Nav className="ms-auto">
-                <Nav.Link href="#about">About</Nav.Link>
-                
-                {/* Dropdown for Academic */}
-                <NavDropdown title="Academic" id="academic-dropdown">
-                  <NavDropdown.Item href="#education">Education</NavDropdown.Item>
-                  <NavDropdown.Item href="#teaching">Teaching</NavDropdown.Item>
-                  <NavDropdown.Item href="#research">Research</NavDropdown.Item>
-                  <NavDropdown.Item href="#projects">Projects</NavDropdown.Item>
-                </NavDropdown>
-
+                <Nav.Link href="#hero-section">About</Nav.Link>
                 <Nav.Link href="#skills">Skills</Nav.Link>
+                <Nav.Link href="#educational-background">Education</Nav.Link>
+                <Nav.Link href="#hobbies">Hobbies</Nav.Link>
                 <Nav.Link href="#contact">Contact</Nav.Link>
               </Nav>
             </Navbar.Collapse>
