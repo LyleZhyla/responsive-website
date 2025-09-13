@@ -46,10 +46,10 @@ const Hobbies = () => {
       slides: [
         { image: require("./assets/anime1.jpg"), text: "As a Reincarnated Aristocrat, I'll Use My Appraisal Skill to Rise in the World" },
         { image: require("./assets/anime2.jpg"), text: "Am I Actually the Strongest?" },
-        { image: require("./assets/anime3.png"), text: "Bogus Skill <<Fruitmaster>>" },
+        { image: require("./assets/anime3.jpg"), text: "Bogus Skill <<Fruitmaster>>" },
         { image: require("./assets/kdrama1.png"), text: "King the Land" },
-        { image: require("./assets/kdrama2.png"), text: "Business Proposal" },
-        { image: require("./assets/kdrama3.png"), text: "True Beauty" },
+        { image: require("./assets/kdrama2.jpg"), text: "Business Proposal" },
+        { image: require("./assets/kdrama3.jpg"), text: "True Beauty" },
       ]
     },
     {
