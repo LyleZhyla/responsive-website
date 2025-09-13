@@ -101,17 +101,19 @@ const Hobbies = () => {
               <Carousel>
                 {selected.slides.map((slide, idx) => (
                   <Carousel.Item key={idx}>
-                    <img
-                      className="d-block w-100"
-                      src={slide.image}
-                      alt={`slide-${idx}`}
-                      style={{ maxHeight: "400px", objectFit: "cover" }}
-                    />
-                    {/* Title sa baba ng image */}
-                    <div className="text-center mt-2">
-                      <p style={{ fontWeight: "500", fontSize: "16px", color: "#000" }}>
-                        {slide.text}
-                      </p>
+                    <div className="d-flex flex-column align-items-center">
+                      <img
+                        className="d-block w-100"
+                        src={slide.image}
+                        alt={`slide-${idx}`}
+                        style={{ maxHeight: "400px", objectFit: "cover" }}
+                      />
+                      {/* caption sa pinaka-baba */}
+                      <div className="w-100 text-center p-3 bg-light">
+                        <p style={{ fontWeight: "500", fontSize: "16px", color: "#000", margin: 0 }}>
+                          {slide.text}
+                        </p>
+                      </div>
                     </div>
                   </Carousel.Item>
                 ))}
