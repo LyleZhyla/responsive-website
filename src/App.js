@@ -132,9 +132,39 @@ function App() {
       <section id="contact" className="text-center">
         <Container>
           <h2 className="fw-bold mb-4">Contact</h2>
-          <p className="fs-5">Email: <a href="mailto:zhyla.patalod@gmail.com">zhyla.patalod@gmail.com</a></p>
-          <p className="fs-5">LinkedIn | GitHub | Other Links</p>
-          <Button variant="success" size="lg">Contact Me</Button>
+          <p className="fs-5">
+            Email:{" "}
+            <a href="mailto:zhyla.patalod@gmail.com">zhyla.patalod@gmail.com</a>
+          </p>
+          <p className="fs-5">Contact No.: 0966 650 5101</p>
+
+          {/* Social Icons */}
+          <div className="d-flex justify-content-center gap-4 mt-3">
+            <a
+              href="https://www.facebook.com/zhyla.patalod/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-dark fs-3"
+            >
+              <i className="bi bi-facebook"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/zhylapatals/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-dark fs-3"
+            >
+              <i className="bi bi-instagram"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/lyle-zhyla-patalod-9512b9190/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-dark fs-3"
+            >
+              <i className="bi bi-linkedin"></i>
+            </a>
+          </div>
         </Container>
       </section>
 

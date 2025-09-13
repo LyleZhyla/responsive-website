@@ -108,13 +108,14 @@ const Hobbies = () => {
                         alt={`slide-${idx}`}
                         style={{ maxHeight: "400px", objectFit: "cover" }}
                       />
-                      {/* caption sa pinaka-baba */}
-                      <div className="w-100 text-center p-3 bg-light">
+                    </div>
+      
+                    {/* caption sa pinaka-baba */}
+                      <div className="w-100 text-center p-10 bg-light">
                         <p style={{ fontWeight: "500", fontSize: "16px", color: "#000", margin: 0 }}>
                           {slide.text}
                         </p>
                       </div>
-                    </div>
                   </Carousel.Item>
                 ))}
               </Carousel>
