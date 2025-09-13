@@ -139,7 +139,7 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-dark text-white text-center py-3 mt-4">
+      <footer className="text-white text-center py-3 mt-4">
         © {new Date().getFullYear()} My Portfolio | Built with React & Bootstrap
       </footer>
     </>
