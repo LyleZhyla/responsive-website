@@ -1,9 +1,5 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Card, Modal, Button, Carousel } from "react-bootstrap";
-import readingImg from "./assets/1.png";
-import musicImg from "./assets/1.png";
-import travelImg from "./assets/1.png";
-import artsImg from "./assets/1.png";
 
 const Hobbies = () => {
   const [show, setShow] = useState(false);
@@ -15,69 +11,58 @@ const Hobbies = () => {
     setShow(true);
   };
 
-const hobbies = [
-    {
-      icon: "bi bi-book",
-      color: "text-primary",
-      title: "Reading",
-      short: "Tech blogs, research, and self-growth books",
-      slides: [
-        {
-          image: require("./assets/1.png"),
-          text: "Atomic Habits – A practical guide to building better habits."
-        },
-        {
-          image: require("./assets/2x2.jpg"),
-          text: "Deep Work – Strategies for focused success in a distracted world."
-        },
-      ]
-    },
+  const hobbies = [
     {
       icon: "bi bi-music-note-beamed",
       color: "text-success",
-      title: "Music",
-      short: "Listening to OPM and classical music",
+      title: "Music Lover",
+      short: "Listening to pop, soft rock, acoustic, and OPM hits",
       slides: [
-        {
-          image: require("./assets/1.png"),
-          text: "Favorite OPM Playlist – A mix of modern and classic hits."
-        },
-        {
-          image: require("./assets/2x2.jpg"),
-          text: "Classical Essentials – Beethoven, Mozart, and Chopin."
-        }
+        { image: require("./assets/music1.png"), text: "Iris – Goo Goo Dolls" },
+        { image: require("./assets/music2.png"), text: "Shape of You – Ed Sheeran" },
+        { image: require("./assets/music3.jpg"), text: "Alexandra – Reality Club" },
+        { image: require("./assets/music4.jpg"), text: "It Will Rain – Bruno Mars" },
+        { image: require("./assets/music5.jpg"), text: "Paraluman – Adie" },
       ]
     },
     {
-      icon: "bi bi-globe2",
+      icon: "bi bi-guitar",
+      color: "text-primary",
+      title: "Instrument Playing",
+      short: "Playing guitar, piano, and other instruments",
+      slides: [
+        { image: require("./assets/instrument1.jpg"), text: "Guitar" },
+        { image: require("./assets/instrument2.jpg"), text: "Bass Guitar" },
+        { image: require("./assets/instrument3.jpg"), text: "Drums" },
+        { image: require("./assets/instrument4.png"), text: "Keyboard" },
+        { image: require("./assets/instrument5.jpg"), text: "Ukulele" },
+      ]
+    },
+    {
+      icon: "bi bi-collection-play",
       color: "text-danger",
-      title: "Travel",
-      short: "Exploring cultures and new environments",
+      title: "Anime & K-Drama",
+      short: "Watching anime series and K-dramas",
       slides: [
-        {
-          image: require("./assets/1.png"),
-          text: "Japan – Cherry blossoms and cultural immersion."
-        },
-        {
-          image: require("./assets/2x2.jpg"),
-          text: "Singapore – Gardens by the Bay and Marina Bay Sands."
-        }
+        { image: require("./assets/anime1.jpg"), text: "As a Reincarnated Aristocrat, I'll Use My Appraisal Skill to Rise in the World" },
+        { image: require("./assets/anime2.jpg"), text: "Am I Actually the Strongest?" },
+        { image: require("./assets/anime3.png"), text: "Bogus Skill <<Fruitmaster>>" },
+        { image: require("./assets/kdrama1.png"), text: "King the Land" },
+        { image: require("./assets/kdrama2.png"), text: "Business Proposal" },
+        { image: require("./assets/kdrama3.png"), text: "True Beauty" },
       ]
     },
     {
-      icon: "bi bi-brush",
+      icon: "bi bi-dribbble",
       color: "text-warning",
-      title: "Creative Arts",
-      short: "Digital design and visual storytelling",
+      title: "Sports Enthusiast",
+      short: "Loves racquet sports and other competitive games",
       slides: [
-        {
-          image: require("./assets/1.png"),
-          text: "Poster Design – Minimalist storytelling through visuals."
-        },
-        {
-          image: require("./assets/2x2.jpg"),
-          text: "Digital Illustrations – Bringing imagination to life."
-        }
+        { image: require("./assets/sport1.jpg"), text: "Tennis" },
+        { image: require("./assets/sport2.png"), text: "Badminton" },
+        { image: require("./assets/sport3.png"), text: "Volleyball" },
+        { image: require("./assets/sport4.png"), text: "Table Tennis" },
+        { image: require("./assets/sport5.png"), text: "Basketball" },
       ]
     },
   ];
