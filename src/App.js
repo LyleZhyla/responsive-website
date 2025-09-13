@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Navbar, Nav, Button, Card, Row, Col, Image, NavDropdown } from 'react-bootstrap';
+import { Container, Navbar, Nav, Button, Card, Row, Col, Image} from 'react-bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import ProfilePic from './assets/2x2.jpg';
 import './App.css';
@@ -17,7 +17,7 @@ function App() {
             <Navbar.Toggle aria-controls="navbar-nav" />
             <Navbar.Collapse id="navbar-nav">
               <Nav className="ms-auto">
-                <Nav.Link href="#hero-section">About</Nav.Link>
+                <Nav.Link href="#home">About</Nav.Link>
                 <Nav.Link href="#skills">Skills</Nav.Link>
                 <Nav.Link href="#educational-background">Education</Nav.Link>
                 <Nav.Link href="#hobbies">Hobbies</Nav.Link>
@@ -31,7 +31,7 @@ function App() {
 
 
       {/* Hero Section */}
-      <section className="hero-section">
+      <section className="hero-section py-6">
         <Container className="text-center">
           <Image
             src={ProfilePic} // imported image
@@ -65,53 +65,114 @@ function App() {
 
 
       {/* Skills Section */}
-      <section id="skills">
-        <Container>
-          <h2 className="fw-bold mb-4 text-center">Skills</h2>
-          <Row>
-            <Col md={6}>
-              <h5>Python</h5>
-              <div className="progress mb-3">
-                <div className="progress-bar bg-success" role="progressbar" style={{width: "90%"}}>
-                  Advanced
-                </div>
+      <section id="skills" className="py-5">
+      <Container>
+        <h2 className="fw-bold mb-4 text-center">Expertise & Skills</h2>
+        <Row>
+          {/* Expertise Column */}
+          <Col md={6}>
+            <h4 className="text-center mb-4">Expertise</h4>
+            <h5>Teaching & Research</h5>
+            <div className="progress mb-3">
+              <div
+                className="progress-bar bg-danger"
+                role="progressbar"
+                style={{ width: "95%" }}
+              >
+                Expert
               </div>
-              <h5>Java</h5>
-              <div className="progress mb-3">
-                <div className="progress-bar bg-info" role="progressbar" style={{width: "75%"}}>
-                  Intermediate
-                </div>
+            </div>
+
+            <h5>Python</h5>
+            <div className="progress mb-3">
+              <div
+                className="progress-bar bg-success"
+                role="progressbar"
+                style={{ width: "90%" }}
+              >
+                Advanced
               </div>
-              <h5>JavaScript / React</h5>
-              <div className="progress mb-3">
-                <div className="progress-bar bg-warning text-dark" role="progressbar" style={{width: "80%"}}>
-                  Advanced
-                </div>
+            </div>
+
+            <h5>JavaScript / React</h5>
+            <div className="progress mb-3">
+              <div
+                className="progress-bar bg-warning text-dark"
+                role="progressbar"
+                style={{ width: "80%" }}
+              >
+                Advanced
               </div>
-            </Col>
-            <Col md={6}>
-              <h5>Flask / MySQL</h5>
-              <div className="progress mb-3">
-                <div className="progress-bar bg-primary" role="progressbar" style={{width: "70%"}}>
-                  Intermediate
-                </div>
+            </div>
+
+            <h5>Java</h5>
+            <div className="progress mb-3">
+              <div
+                className="progress-bar bg-info"
+                role="progressbar"
+                style={{ width: "75%" }}
+              >
+                Intermediate
               </div>
-              <h5>Git & Netlify</h5>
-              <div className="progress mb-3">
-                <div className="progress-bar bg-secondary" role="progressbar" style={{width: "60%"}}>
-                  Intermediate
-                </div>
+            </div>
+
+            <h5>Flask / MySQL</h5>
+            <div className="progress mb-3">
+              <div
+                className="progress-bar bg-primary"
+                role="progressbar"
+                style={{ width: "70%" }}
+              >
+                Intermediate
               </div>
-              <h5>Teaching & Research</h5>
-              <div className="progress mb-3">
-                <div className="progress-bar bg-danger" role="progressbar" style={{width: "95%"}}>
-                  Expert
-                </div>
+            </div>
+
+            <h5>Git & Netlify</h5>
+            <div className="progress mb-3">
+              <div
+                className="progress-bar bg-secondary"
+                role="progressbar"
+                style={{ width: "60%" }}
+              >
+                Intermediate
               </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+            </div>
+          </Col>
+
+          {/* Skills Column */}
+          <Col md={6}>
+            <h4 className="text-center mb-4">Skills</h4>
+            <Row className="text-center">
+              <Col md={6} className="mb-4">
+                <i className="bi bi-people-fill fs-1 text-primary"></i>
+                <h5 className="mt-2">Leadership</h5>
+              </Col>
+              <Col md={6} className="mb-4">
+                <i className="bi bi-chat-dots-fill fs-1 text-success"></i>
+                <h5 className="mt-2">Communication</h5>
+              </Col>
+              <Col md={6} className="mb-4">
+                <i className="bi bi-lightbulb-fill fs-1 text-warning"></i>
+                <h5 className="mt-2">Problem Solving</h5>
+              </Col>
+              <Col md={6} className="mb-4">
+                <i className="bi bi-people fs-1 text-danger"></i>
+                <h5 className="mt-2">Teamwork</h5>
+              </Col>
+              <Col md={6} className="mb-4">
+                <i className="bi bi-clock-history fs-1 text-info"></i>
+                <h5 className="mt-2">Time Management</h5>
+              </Col>
+              <Col md={6} className="mb-4">
+                <i className="bi bi-journal-check fs-1 text-secondary"></i>
+                <h5 className="mt-2">Adaptability</h5>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+
 
 
       {/* Academic Section */}
@@ -122,7 +183,7 @@ function App() {
       <Hobbies />
 
       {/* Contact Section */}
-      <section id="contact" className="text-center">
+      <section id="contact" className="text-center py-4">
         <Container>
           <h2 className="fw-bold mb-4">Contact</h2>
           <p className="fs-5">
@@ -137,7 +198,7 @@ function App() {
               href="https://www.facebook.com/zhyla.patalod/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-dark fs-3"
+              className="text-dark fs-1"
             >
               <i className="bi bi-facebook"></i>
             </a>
@@ -145,7 +206,7 @@ function App() {
               href="https://www.instagram.com/zhylapatals/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-dark fs-3"
+              className="text-dark fs-1"
             >
               <i className="bi bi-instagram"></i>
             </a>
@@ -153,7 +214,7 @@ function App() {
               href="https://www.linkedin.com/in/lyle-zhyla-patalod-9512b9190/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-dark fs-3"
+              className="text-dark fs-1"
             >
               <i className="bi bi-linkedin"></i>
             </a>
